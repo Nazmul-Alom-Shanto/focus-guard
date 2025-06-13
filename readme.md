@@ -2,6 +2,8 @@
 
 FocusGuard is a lightweight Chrome extension designed to help you stay focused by blocking distracting websites based on customizable time schedules.
 
+>**FocusGuard**
+>![Screenshot](Screenshot.png)
 ## Features
 - ⏰ **Time-based blocking** — Set custom time ranges to control when websites are blocked  
 - 🛑 **Flexible site blocking** — Block specific domains, URLs, or keywords  
