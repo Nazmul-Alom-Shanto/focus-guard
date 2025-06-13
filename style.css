@@ -1,0 +1,324 @@
+/* === GLOBAL RESETS === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* === LIGHT MODE === */
+  body.light-mode {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  
+  /* === TIME RANGES === */
+  .time-ranges {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* === TIME RANGE BLOCK === */
+  .time-range {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #2c2c2c;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  body.light-mode .time-range {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+  }
+  
+  /* === TITLE & DELETE === */
+  .time-range .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .time-range .title-details h1 {
+    font-size: 1.2rem;
+    color: #00adb5;
+  }
+  
+  .time-range .title-details p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  body.light-mode .title-details p {
+    color: #555;
+  }
+  
+  .time-range .delete-time-range {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1rem;
+    cursor: pointer;
+    
+  }
+  
+  /* === URLS SECTION === */
+  .urls {
+    margin-top: 15px;
+    display: none;
+  }
+  
+  .urls.expanded {
+    display: block;
+  }
+  
+  .urls h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ffce54;
+  }
+  body.light-mode .urls h1 {
+    color: #e8a200;
+  }
+  
+  .urls ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .url-item {
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body.light-mode .url-item {
+    background-color: #f1f1f1;
+  }
+  
+  /* === URL LIST CONTedit-urlNT === */
+  .url-item .url {
+    flex: 1;
+    outline: none;
+    word-break: break-all;
+  }
+  
+  .li-end {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .edit-url,
+  .delete-url {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  body.light-mode .edit-url,
+  body.light-mode .delete-url {
+    color: #333;
+    background: none;
+  }
+  
+  .edit-url:hover {
+    color: #4caf50;
+  }
+  
+  .delete-url:hover {
+    color: #f44336;
+  }
+  
+  /* === BUTTONS === */
+  button {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  button:hover {
+    background-color: #00bfc9;
+  }
+  body.light-mode button {
+    background-color: #007bff;
+  
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+    pointer-events: none;
+    background-color: #ccc; /* light grey */
+    color: #666;
+    border-color: #aaa;
+  }
+  
+  body.light-mode button:hover {
+    background-color: #3399ff;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 14px;
+  }
+  
+  .add-url {
+    margin-top: 10px;
+    background-color: #393e46;
+    font-size: 0.85rem;
+  }
+  body.light-mode .add-url {
+    background-color: #ccc;
+    color: #222;
+  }
+  
+  /* === ADD TIME RANGE BUTTON === */
+  .add-time-range {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* === ADD TIME RANGE WIZARD === */
+  .add-time-range-wizard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .add-time-range-wizard-container {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+  }
+  body.light-mode .add-time-range-wizard-container {
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  .add-time-range-wizard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .add-time-range-wizard .header h1 {
+    font-size: 1.2rem;
+    color: #00adb5;
+  }
+  body.light-mode .add-time-range-wizard .header h1 {
+    color: #007bff;
+  }
+  
+  .add-time-range-wizard input[type="text"],
+  .add-time-range-wizard input[type="time"] {
+    width: 100%;
+    padding: 15px;
+    margin: 6px 0 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+  }
+  .add-time-range-wizard input:focus {
+    border: 2px solid #007bff;
+  }
+  body.light-mode .add-time-range-wizard input[type="text"],
+  body.light-mode .add-time-range-wizard input[type="time"] {
+    background-color: #f1f1f1;
+    color: #222;
+  }
+  
+  /* === TIME INPUT === */
+  .time-taker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .time-taker input {
+    flex: 1;
+  }
+  
+  .mood-switcher {
+    position: fixed;
+    top: 10px;
+    right: 25px;
+  }
+  .mood-switcher .mood {
+    background: #db4040 ;
+    color: #1e1e1e;
+    border-radius: 15px;
+  }
+.light-mode .mood {
+    background: #fff;
+    color: #2c2c2c;
+  }
+  body {
+    padding-top: 60px;
+  }
+  /* === SCROLLBAR === */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .expired {
+    margin-bottom: 20px;
+  }
+  .expired h3 {
+    color : green;
+    font-weight: 700;
+    opacity: 0.8;
+    font-size: 120%;
+  }
+  .expired input {
+    width: 60px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 07px;
+    border: 1px solid rgba(0,0,0,0.5);
+    background: #f1f1f1;
+    outline:  none;
+  }
+  /* Hide number input spinners (Chrome, Safari, Edge) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  .expired input:focus {
+    border: 2px solid green;
+  }
+.count-down {
+  color:  red;
+}

@@ -1,0 +1,28 @@
+{
+    "manifest_version" : 3,
+    "name" : "Close Tab based on url & time",
+    "version" : "1.0",
+    "description" : "Closes tabs that match a list of blocked websites.",
+    "permissions" : [
+        "tabs",
+        "webNavigation",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions" : [
+        "<all_urls>"
+    ],
+    "background" : {
+        "service_worker" : "background.js"
+        },
+    "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "32": "icons/icon32.png"
+    }
+,
+    "action" : {
+        "default_title" : "Website Blocker",
+        "default_popup" : "popup.html"
+    }
+}

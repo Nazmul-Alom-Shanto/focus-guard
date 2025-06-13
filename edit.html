@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Time Toggle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body class="light-mode">
+  <div class="mood-switcher">
+  <button class="mood"><i class="fa-solid fa-moon"></i></button>
+  </div>
+  <div class="time-ranges">
+  </div>
+  <button class="add-time-range">Add Time Range</button>
+  <div class="add-time-range-wizard">
+    <div class="add-time-range-wizard-container">
+      <div class="header">
+        <h1>Add Time Range</h1>
+        <button class="add">Save</button>
+      </div>
+      <input type="text" placeholder="Title" class="add-time-range-title">
+      <div class="time-taker">
+        <input type="time" class="start-time-input">
+        <span>to</span>
+        <input type="time" class="end-time-input">
+      </div>
+      <div class="expired">
+        <h3>Disable Edit & Delete for the next
+          <input type="number" min="0"></input> 
+          days
+        </h3>
+      </div>
+      <div class="add-time-range-urls">
+        <div class="add-time-range-urls-header">
+          <h2>Blocked URLs</h2>
+          <button class="add-url" id="add-time-range-add-url">Add URL</button>
+        </div>
+
+        <ul class="add-time-range-urls">
+         
+        </ul>
+      </div>
+
+    </input>
+    </div>
+  </div>
+
+  <script src="./edit.js"></script>
+</body>
+</html>
