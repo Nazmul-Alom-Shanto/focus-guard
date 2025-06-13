@@ -1,8 +1,8 @@
 {
     "manifest_version" : 3,
-    "name" : "Close Tab based on url & time",
+    "name" : "FocusGuard",
     "version" : "1.0",
-    "description" : "Closes tabs that match a list of blocked websites.",
+    "description" : "Block tabs that match a list of blocked websites & keywords.",
     "permissions" : [
         "tabs",
         "webNavigation",
@@ -22,7 +22,7 @@
     }
 ,
     "action" : {
-        "default_title" : "Website Blocker",
+        "default_title" : "Focus Guard",
         "default_popup" : "popup.html"
     }
 }

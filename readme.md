@@ -1,18 +1,25 @@
-# 🔒 Focus Redirector Chrome Extension
+# 🔒 FocusGuard Chrome Extension
 
-A minimal Chrome extension that helps you stay focused by blocking distracting websites during custom time ranges.
+FocusGuard is a lightweight Chrome extension designed to help you stay focused by blocking distracting websites based on customizable time schedules.
 
 ## Features
-- Define time-based rules
-- Block specific keywords or domains
-- Friendly redirect message
-- Easy-to-edit blocklist
+- ⏰ **Time-based blocking** — Set custom time ranges to control when websites are blocked  
+- 🛑 **Flexible site blocking** — Block specific domains, URLs, or keywords  
+- 📢 **Motivational redirects** — Display a friendly redirect message to keep you on track  
+- 🧾 **Simple blocklist editing** — Easily manage and update your list of blocked sites  
+- 🔒 **Unbreakable Promises** — Commit to a "no-edit" mode for certain days where rules can't be modified or deleted
 
-## Install
-1. Clone this repo
-2. Go to `chrome://extensions/`
-3. Enable "Developer Mode"
-4. Click "Load unpacked" and select this folder
+## Installation
+
+### From source
+1. Clone this repository  
+2. Open `chrome://extensions/` in Chrome  
+3. Enable **Developer Mode** (top right)  
+4. Click **Load unpacked** and select the extension folder  
+
+### From release  
+Download the `.crx` file from the [Releases](https://github.com/Nazmul-Alom-Shanto/focus-guard/releases) page and install it manually.
 
 ## License
-MIT
+
+This project is licensed under the [MIT License](./LICENSE).
